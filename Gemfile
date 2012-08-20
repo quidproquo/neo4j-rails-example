@@ -2,8 +2,21 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 
+# Database:
 gem 'neo4j', '1.3.1'
 gem 'neo4j-admin'
+
+platforms :ruby do
+  gem 'sqlite3'
+end
+
+platforms :jruby do
+  gem 'activerecord-jdbc-adapter'
+  gem 'activerecord-jdbcsqlite3-adapter'
+  gem 'jruby-openssl'
+end
+
+gem 'fb_graph'
 
 # Use unicorn as the web server
 # gem 'unicorn'

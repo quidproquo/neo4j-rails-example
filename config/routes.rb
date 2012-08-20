@@ -20,6 +20,13 @@ Neo4jRailsExample::Application.routes.draw do
   get 'roles/:actor_id/:movie_id' => 'roles#new', :as => :new_role
   post 'roles/:actor_id/:movie_id' => 'roles#create', :as => :roles
 
+  # Facebook API:
+  resource :facebook, :except => :create do
+    get :callback, :to => :create
+  end
+  resource :dashboard, :only => :show
+  resource :profile, :only => :show
+
   root :to => "actors#index"
 
   # The priority is based upon order of creation:
