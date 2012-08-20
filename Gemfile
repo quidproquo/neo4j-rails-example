@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 
-# Database:
+# Neo4j Database:
 gem 'neo4j', '1.3.1'
 gem 'neo4j-admin'
 
